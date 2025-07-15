@@ -1,0 +1,16 @@
+{
+  "name": "Go Dev",
+  "image": "golang:latest",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/go/src/project,type=bind,consistency=cached"
+  ],
+  "workspaceFolder": "/go/src/project",
+  "extensions": [
+    "golang.go"
+  ],
+  "settings": {
+    "go.toolsManagement.checkForUpdates": "local",
+    "go.useLanguageServer": true
+  },
+  "postCreateCommand": "go mod init github.com/gellanz/golang-devcontainer",
+}
